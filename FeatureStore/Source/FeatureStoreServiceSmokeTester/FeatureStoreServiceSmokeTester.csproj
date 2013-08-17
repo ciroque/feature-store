@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{68879FC8-4B50-4439-A1D0-1E675ACB80C0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FeatureStoreServiceSmokeTester</RootNamespace>
+    <AssemblyName>FeatureStoreServiceSmokeTester</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\..\Ciroque.Foundations.FeatureStore.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ButtonCommandHandlers\CheckFeatureStateDropDownButtonCommand.cs" />
+    <Compile Include="ButtonCommandHandlers\CreateFeatureDropDownButtonCommand.cs" />
+    <Compile Include="ButtonCommandHandlers\DropDownButtonCommandBase.cs" />
+    <Compile Include="ButtonCommandHandlers\RetrieveDefinedFeaturesDropDownButtonCommand.cs" />
+    <Compile Include="ButtonCommandHandlers\SynchronousCheckFeatureStateDropDownButtonCommand.cs" />
+    <Compile Include="ButtonCommandHandlers\SynchronousCreateFeatureDropDownButtonCommand.cs" />
+    <Compile Include="ButtonCommandHandlers\AsynchronousCheckFeatureStateDropDownButtonCommand.cs" />
+    <Compile Include="ButtonCommandHandlers\AsynchronousCreateFeatureDropDownButtonCommand.cs" />
+    <Compile Include="ButtonCommandHandlers\AsynchronousRetrieveDefinedFeaturesDropDownButtonCommand.cs" />
+    <Compile Include="ButtonCommandHandlers\AsynchronousUpdateFeatureStateDropDownButtonCommand.cs" />
+    <Compile Include="ButtonCommandHandlers\UpdateFeatureStateDropDownButtonCommand.cs" />
+    <Compile Include="Controllers\DropDownButtonClickedCommandFactory.cs" />
+    <Compile Include="ButtonCommandHandlers\SynchronousUpdateFeatureStateDropDownButtonCommand.cs" />
+    <Compile Include="ButtonCommandHandlers\SynchronousRetrieveDefinedFeaturesDropDownButtonCommand.cs" />
+    <Compile Include="Controllers\IDropDownButtonCommand.cs" />
+    <Compile Include="Controllers\IFeatureStoreMethodArguments.cs" />
+    <Compile Include="Controllers\IServiceMethodUiBridge.cs" />
+    <Compile Include="Controls\FeatureStoreMethodArgumentsPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\CommonResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ControlTextsResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ControlTextsResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TabPageBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CheckFeatureState.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FeatureStoreServiceSmokeTesterMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeatureStoreServiceSmokeTesterMain.Designer.cs">
+      <DependentUpon>FeatureStoreServiceSmokeTesterMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controls\CreateFeature.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\HelpTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\RetrieveDefinedFeatures.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ServiceMethodUserInterfaceDefinition.cs" />
+    <Compile Include="Controllers\TabPagePopulator.cs" />
+    <Compile Include="Controls\UpdateFeatureState.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\TabToolStripCoordinator.cs" />
+    <Compile Include="Resources\RtfResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RtfResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ToolStripItemCollectionExtensions.cs" />
+    <Compile Include="Utility\MessageIdFactory.cs" />
+    <EmbeddedResource Include="FeatureStoreServiceSmokeTesterMain.resx">
+      <DependentUpon>FeatureStoreServiceSmokeTesterMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Resources\CommonResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CommonResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ControlTextsResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ControlTextsResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\RtfResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RtfResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="..\..\Ciroque.Foundations.FeatureStore.snk">
+      <Link>Ciroque.Foundations.FeatureStore.snk</Link>
+    </None>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NoSmoke.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mutual\Mutual.csproj">
+      <Project>{36CFEB61-BDDA-4285-BB59-A7217A68229B}</Project>
+      <Name>Mutual</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiceProxy\ServiceProxy.csproj">
+      <Project>{340E4AF0-9C8F-40EF-923D-F442F3ACD43A}</Project>
+      <Name>ServiceProxy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Service\Service.csproj">
+      <Project>{88A7DEA1-0A5D-48E9-AAB8-C31D93A67E81}</Project>
+      <Name>Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

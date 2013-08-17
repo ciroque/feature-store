@@ -1,0 +1,9 @@
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Tests\Instrumentation.Tests\bin\Debug\Ciroque.Foundations.FeatureStore.Instrumentation.Tests.dll
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Tests\Instrumentation.Tests\bin\Debug\Ciroque.Foundations.FeatureStore.Instrumentation.Tests.pdb
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Tests\Instrumentation.Tests\bin\Debug\Ciroque.Foundations.FeatureStore.Instrumentation.dll
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Tests\Instrumentation.Tests\bin\Debug\log4net.dll
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Tests\Instrumentation.Tests\bin\Debug\Ciroque.Foundations.FeatureStore.Instrumentation.pdb
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Tests\Instrumentation.Tests\bin\Debug\log4net.xml
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Tests\Instrumentation.Tests\obj\Debug\ResolveAssemblyReference.cache
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Tests\Instrumentation.Tests\obj\Debug\Ciroque.Foundations.FeatureStore.Instrumentation.Tests.dll
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Tests\Instrumentation.Tests\obj\Debug\Ciroque.Foundations.FeatureStore.Instrumentation.Tests.pdb

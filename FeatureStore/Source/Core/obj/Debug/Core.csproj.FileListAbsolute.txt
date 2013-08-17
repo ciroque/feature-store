@@ -1,0 +1,17 @@
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\Core\bin\Debug\Ciroque.Foundations.FeatureStore.Core.dll
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\Core\bin\Debug\Ciroque.Foundations.FeatureStore.Core.pdb
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\Core\bin\Debug\Ciroque.Foundations.FeatureStore.Data.dll
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\Core\bin\Debug\Ciroque.Foundations.FeatureStore.Instrumentation.dll
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\Core\bin\Debug\Ciroque.Foundations.FeatureStore.Mutual.dll
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\Core\bin\Debug\log4net.dll
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\Core\bin\Debug\Ciroque.Foundations.FeatureStore.Data.pdb
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\Core\bin\Debug\Ciroque.Foundations.FeatureStore.Instrumentation.pdb
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\Core\bin\Debug\Ciroque.Foundations.FeatureStore.Mutual.pdb
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\Core\bin\Debug\log4net.xml
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\Core\obj\Debug\ResolveAssemblyReference.cache
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\Core\obj\Debug\Ciroque.Foundations.FeatureStore.Core.ExceptionMessageResources.resources
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\Core\obj\Debug\Ciroque.Foundations.FeatureStore.Core.LoggingResources.resources
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\Core\obj\Debug\GenerateResource.read.1.tlog
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\Core\obj\Debug\GenerateResource.write.1.tlog
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\Core\obj\Debug\Ciroque.Foundations.FeatureStore.Core.dll
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\Core\obj\Debug\Ciroque.Foundations.FeatureStore.Core.pdb

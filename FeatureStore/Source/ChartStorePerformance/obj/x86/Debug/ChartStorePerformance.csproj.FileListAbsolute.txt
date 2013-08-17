@@ -1,0 +1,9 @@
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\ChartStorePerformance\bin\Debug\ChartStorePerformance.exe
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\ChartStorePerformance\bin\Debug\ChartStorePerformance.pdb
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\ChartStorePerformance\bin\Debug\Ciroque.Foundations.FeatureStore.Data.dll
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\ChartStorePerformance\bin\Debug\Ciroque.Foundations.FeatureStore.Mutual.dll
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\ChartStorePerformance\bin\Debug\Ciroque.Foundations.FeatureStore.Data.pdb
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\ChartStorePerformance\bin\Debug\Ciroque.Foundations.FeatureStore.Mutual.pdb
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\ChartStorePerformance\obj\x86\Debug\ResolveAssemblyReference.cache
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\ChartStorePerformance\obj\x86\Debug\ChartStorePerformance.exe
+K:\Development\FeatureStore\FeatureStore\FeatureStore\Source\ChartStorePerformance\obj\x86\Debug\ChartStorePerformance.pdb

@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ciroque.Foundations.FeatureStore.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Ciroque.Foundations.FeatureStore.Core.ExceptionMessageResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Ciroque.Foundations.FeatureStore.Core.ExceptionMessageResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Ciroque.Foundations.FeatureStore.Core.ExceptionMessageResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Ciroque.Foundations.FeatureStore.Core.ExceptionMessageResources.CHECK_FEATURE_STATE_EXCEPTION">
+            <summary>
+              Looks up a localized string similar to An exception occurred querying the data store for the Feature. The query parameters were: Id {0} and Space {1}. See the InnerException property for further details..
+            </summary>
+        </member>
+        <member name="P:Ciroque.Foundations.FeatureStore.Core.ExceptionMessageResources.DUPLICATE_KEY_VIOLATION">
+            <summary>
+              Looks up a localized string similar to The Feature could not be created due to a duplicate key violation. The Id {0}, OwnerId {1}, and Space {2} already exist in the data store..
+            </summary>
+        </member>
+        <member name="P:Ciroque.Foundations.FeatureStore.Core.ExceptionMessageResources.EMPTY_OWNER_GUID_NOT_ALLOWED">
+            <summary>
+              Looks up a localized string similar to An empty Guid was specified for the OwnerId, this is not allowed. A non-empty OwnerId must be provided..
+            </summary>
+        </member>
+        <member name="P:Ciroque.Foundations.FeatureStore.Core.ExceptionMessageResources.FEATURE_CREATION_EXCEPTION">
+            <summary>
+              Looks up a localized string similar to An exception occurred creating the Feature. See the InnerException property for details..
+            </summary>
+        </member>
+        <member name="P:Ciroque.Foundations.FeatureStore.Core.ExceptionMessageResources.FEATURE_NOT_FOUND">
+            <summary>
+              Looks up a localized string similar to No Feature having Id {0} and Space {1} was found..
+            </summary>
+        </member>
+        <member name="P:Ciroque.Foundations.FeatureStore.Core.ExceptionMessageResources.RETRIEVE_DEFINED_FEATURES_EXCEPTION">
+            <summary>
+              Looks up a localized string similar to An exception occurred retrieving defined Features. The query parameters were: OwnerId {0} and Space {1}. See the InnerException property for further details..
+            </summary>
+        </member>
+        <member name="P:Ciroque.Foundations.FeatureStore.Core.ExceptionMessageResources.UPDATE_FEATURE_STATE_EXCEPTION">
+            <summary>
+              Looks up a localized string similar to An exception occurred updating the Feature. The query parameters were: Id {0} and Space {1}. See the InnerException property for further details..
+            </summary>
+        </member>
+        <member name="T:Ciroque.Foundations.FeatureStore.Core.StandardFeatureStore">
+            <summary>
+              The primary implementation of the IFeatureStore interface.
+            </summary>
+        </member>
+        <member name="F:Ciroque.Foundations.FeatureStore.Core.StandardFeatureStore.m_Logger">
+            <summary>
+              Instance of the log4net ILog interface for logging.
+            </summary>
+        </member>
+        <member name="F:Ciroque.Foundations.FeatureStore.Core.StandardFeatureStore.m_StorageContainer">
+            <summary>
+              The <see cref="T:Ciroque.Foundations.FeatureStore.Data.IStorageContainer"/> to be used for data storage / retrieval operations.
+            </summary>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.StandardFeatureStore.#ctor(Ciroque.Foundations.FeatureStore.Data.IStorageContainer)">
+            <summary>
+              Initializes a new instance of the <see cref="T:Ciroque.Foundations.FeatureStore.Core.StandardFeatureStore"/> class.
+            </summary>
+            <param name="storageContainer">The container to / from which the Features will be stored / loaded.</param>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.StandardFeatureStore.CreateFeature(Ciroque.Foundations.FeatureStore.Mutual.CreateFeatureRequest)">
+            <summary>
+              Stores a feature that can be queried and updated.
+            </summary>
+            <param name="request"><see cref="T:Ciroque.Foundations.FeatureStore.Mutual.CreateFeatureRequest"/> instance that defines the state required to create a new Feature.</param>
+            <returns>
+              <see cref="T:Ciroque.Foundations.FeatureStore.Mutual.CreateFeatureResponse"/> containing the results of the request to create a new Feature.
+            </returns>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.StandardFeatureStore.CheckFeatureState(Ciroque.Foundations.FeatureStore.Mutual.CheckFeatureStateRequest)">
+            <summary>
+              Checks the state of an existing Feature.
+            </summary>
+            <param name="request"><see cref="T:Ciroque.Foundations.FeatureStore.Mutual.CheckFeatureStateRequest"/> instance that defines the criteria by which the Feature will be queried.</param>
+            <returns>
+              <see cref="T:Ciroque.Foundations.FeatureStore.Mutual.CheckFeatureStateResponse"/> containing the results of the request for the state of a Feature.
+            </returns>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.StandardFeatureStore.UpdateFeatureState(Ciroque.Foundations.FeatureStore.Mutual.UpdateFeatureStateRequest)">
+            <summary>
+              Updates the state of a specified feature.
+            </summary>
+            <param name="request"><see cref="T:Ciroque.Foundations.FeatureStore.Mutual.UpdateFeatureStateRequest"/> instance that defines the state necessary to update a specified Feature.</param>
+            <returns>
+              <see cref="T:Ciroque.Foundations.FeatureStore.Mutual.UpdateFeatureStateResponse"/> containing the results of the request to update the state of a specified Feature.
+            </returns>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.StandardFeatureStore.RetrieveDefinedFeatures(Ciroque.Foundations.FeatureStore.Mutual.RetrieveDefinedFeaturesRequest)">
+            <summary>
+              Retrieves the defined features.
+            </summary>
+            <param name="request"><see cref="T:Ciroque.Foundations.FeatureStore.Mutual.RetrieveDefinedFeaturesRequest"/> instance containing the criteria by which the <see cref="T:Ciroque.Foundations.FeatureStore.Mutual.Feature"/>s are selected.</param>
+            <returns>
+              <see cref="T:Ciroque.Foundations.FeatureStore.Mutual.RetrieveDefinedFeaturesResponse"/> instance containing the results based on the given criteria.
+            </returns>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.StandardFeatureStore.EnsureOwnerId(Ciroque.Foundations.FeatureStore.Mutual.Feature)">
+            <summary>
+              Ensures the owner id.
+            </summary>
+            <param name = "feature">The feature.</param>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.StandardFeatureStore.CheckDuplicateKey(Ciroque.Foundations.FeatureStore.Mutual.Feature)">
+            <summary>
+              Checks the duplicate key.
+            </summary>
+            <param name = "feature">The feature.</param>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.StandardFeatureStore.LogInteraction(System.Object,System.Object)">
+            <summary>
+              Logs the interaction.
+            </summary>
+            <param name = "request">The request.</param>
+            <param name = "response">The response.</param>
+        </member>
+        <member name="T:Ciroque.Foundations.FeatureStore.Core.LoggingResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Ciroque.Foundations.FeatureStore.Core.LoggingResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Ciroque.Foundations.FeatureStore.Core.LoggingResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Ciroque.Foundations.FeatureStore.Core.LoggingResources.LOG_REQUEST_RESPONSE">
+            <summary>
+              Looks up a localized string similar to Request: {0} Response: {1}.
+            </summary>
+        </member>
+        <member name="T:Ciroque.Foundations.FeatureStore.Core.CheckFeatureStateException">
+            <summary>
+              The exception that is thrown when an error occurs calling the CheckFeatureState method.
+            </summary>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.CheckFeatureStateException.#ctor">
+            <summary>
+              Initializes a new instance of the <see cref="T:Ciroque.Foundations.FeatureStore.Core.CheckFeatureStateException"/> class.
+            </summary>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.CheckFeatureStateException.#ctor(System.String,System.Exception)">
+            <summary>
+              Initializes a new instance of the <see cref="T:Ciroque.Foundations.FeatureStore.Core.CheckFeatureStateException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="inner">The inner.</param>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.CheckFeatureStateException.#ctor(System.String)">
+            <summary>
+              Initializes a new instance of the <see cref="T:Ciroque.Foundations.FeatureStore.Core.CheckFeatureStateException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.CheckFeatureStateException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+              Initializes a new instance of the <see cref="T:Ciroque.Foundations.FeatureStore.Core.CheckFeatureStateException"/> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info"/> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult"/> is zero (0). </exception>
+        </member>
+        <member name="T:Ciroque.Foundations.FeatureStore.Core.RetrieveDefinedFeaturesException">
+            <summary>
+              The exception that is thrown when an error occurs calling the RetrieveDefinedFeatures method
+            </summary>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.RetrieveDefinedFeaturesException.#ctor">
+            <summary>
+              Initializes a new instance of the <see cref="T:Ciroque.Foundations.FeatureStore.Core.RetrieveDefinedFeaturesException"/> class.
+            </summary>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.RetrieveDefinedFeaturesException.#ctor(System.String)">
+            <summary>
+              Initializes a new instance of the <see cref="T:Ciroque.Foundations.FeatureStore.Core.RetrieveDefinedFeaturesException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.RetrieveDefinedFeaturesException.#ctor(System.String,System.Exception)">
+            <summary>
+              Initializes a new instance of the <see cref="T:Ciroque.Foundations.FeatureStore.Core.RetrieveDefinedFeaturesException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="innerException">The inner exception.</param>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.RetrieveDefinedFeaturesException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+              Initializes a new instance of the <see cref="T:Ciroque.Foundations.FeatureStore.Core.RetrieveDefinedFeaturesException"/> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info"/> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult"/> is zero (0). </exception>
+        </member>
+        <member name="T:Ciroque.Foundations.FeatureStore.Core.UpdateFeatureStateException">
+            <summary>
+              The exception that is thrown when there is a problem updating an existing <see cref="T:Ciroque.Foundations.FeatureStore.Mutual.Feature"/>.
+            </summary>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.UpdateFeatureStateException.#ctor">
+            <summary>
+              Initializes a new instance of the <see cref="T:Ciroque.Foundations.FeatureStore.Core.UpdateFeatureStateException"/> class.
+            </summary>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.UpdateFeatureStateException.#ctor(System.String,System.Exception)">
+            <summary>
+              Initializes a new instance of the <see cref="T:Ciroque.Foundations.FeatureStore.Core.UpdateFeatureStateException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="inner">The inner.</param>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.UpdateFeatureStateException.#ctor(System.String)">
+            <summary>
+              Initializes a new instance of the <see cref="T:Ciroque.Foundations.FeatureStore.Core.UpdateFeatureStateException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.UpdateFeatureStateException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+              Initializes a new instance of the <see cref="T:Ciroque.Foundations.FeatureStore.Core.UpdateFeatureStateException"/> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info"/> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult"/> is zero (0). </exception>
+        </member>
+        <member name="T:Ciroque.Foundations.FeatureStore.Core.CreateFeatureException">
+            <summary>
+              The exception that is thrown when there is a problem creating a new <see cref="T:Ciroque.Foundations.FeatureStore.Mutual.Feature"/>.
+            </summary>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.CreateFeatureException.#ctor">
+            <summary>
+              Initializes a new instance of the <see cref="T:Ciroque.Foundations.FeatureStore.Core.CreateFeatureException"/> class.
+            </summary>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.CreateFeatureException.#ctor(System.String,System.Exception)">
+            <summary>
+              Initializes a new instance of the <see cref="T:Ciroque.Foundations.FeatureStore.Core.CreateFeatureException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="inner">The inner.</param>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.CreateFeatureException.#ctor(System.String)">
+            <summary>
+              Initializes a new instance of the <see cref="T:Ciroque.Foundations.FeatureStore.Core.CreateFeatureException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Ciroque.Foundations.FeatureStore.Core.CreateFeatureException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+              Initializes a new instance of the <see cref="T:Ciroque.Foundations.FeatureStore.Core.CreateFeatureException"/> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info"/> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult"/> is zero (0). </exception>
+        </member>
+    </members>
+</doc>
